@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 1</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <div
+          id="Caja1"
+          style="
+            background-color: red;
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+          "
+        >
+          <span>haz click!!!</span>
+        </div>
+        <div
+          id="Caja2"
+          style="
+            background-color: white;
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+          "
+        >
+          <span>Cambiame</span>
+
+          <script>
+            let caja1 = $("#Caja1");
+            let caja2 = $("#Caja2");
+            let estado = true;
+            caja1.click(function () {
+                
+                if (estado) {
+                caja1.animate({height:"350px"});
+                caja1.css("background-color", "white" )
+                caja2.css("background-color", "red" );
+                estado = false;
+                } else {
+                    caja1.animate({height:"25px"});
+                    caja1.css("background-color", "red" );
+                    caja2.css("background-color", "white" );
+                    estado = true;
+                }
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
